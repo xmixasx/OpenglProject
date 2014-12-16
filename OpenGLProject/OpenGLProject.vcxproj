@@ -77,7 +77,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Drawer.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Rendering.cpp" />
+    <ClCompile Include="ShaderLoader.cpp" />
+    <ClCompile Include="Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32.lib" />
@@ -87,7 +93,13 @@
     <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glut32.lib" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="c:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\glm\glm\gtc\quaternion.inl" />
+    <ClInclude Include="Drawer.h" />
+    <ClInclude Include="LoadMesh.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Rendering.h" />
+    <ClInclude Include="ShaderLoader.h" />
+    <ClInclude Include="Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
