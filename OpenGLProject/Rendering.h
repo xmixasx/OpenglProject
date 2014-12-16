@@ -11,8 +11,8 @@ public:
 	void Draw();
 
 private:
-	//Drawer mDraw;
-	//Transform mTransform;
+	Drawer mDraw;
+	Transform mTransform;
 	ShaderLoader mShaderLoader;
 };
 
