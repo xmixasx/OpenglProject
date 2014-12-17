@@ -1,37 +1,18 @@
-#include <GL\glew.h>
-#include <iostream>
+#include "OpenglIncludes.h"
 
+extern GLuint program;
+extern GLint attribute_v_coord;
+extern GLint attribute_v_normal;
+extern GLint uniform_m;
+extern GLint uniform_v;
+extern GLint uniform_p;
+extern GLint uniform_m_3x3_inv_transp;
+extern GLint uniform_v_inv ;
 
-class ShaderLoader
-{
+class ShaderLoader {
 public:
-	ShaderLoader();
-	GLuint create_shader(const char* filename, GLenum type);
-	~ShaderLoader();
-	char* file_read(const char* filename);
-	bool shader_init(char* vshader, char* fshader);
-	int getUniform_m(){return this->uniform_m;};
-	int getUniform_v(){return this->uniform_v;}
-	int getUniform_uniform_m_3x3_inv_transp(){return this->uniform_m_3x3_inv_transp;}
-	GLuint program;
-
+	int loadShader(char* vshader_filename, char* fshader_filename);
 private:
-	GLuint vs, fs;
-	GLint attribute_v_coord ;
-	GLint attribute_v_normal;
-	GLint uniform_m , uniform_v, uniform_p;
-	GLint uniform_m_3x3_inv_transp , uniform_v_inv ;
-	GLint link_ok;
-	GLint validate_ok;
-
-
+	GLint create_shader(const char* filename, GLenum type);
+	char* file_read(const char* filename);
 };
-
-ShaderLoader::ShaderLoader()
-{
-}
-
-ShaderLoader::~ShaderLoader()
-{
-}
-

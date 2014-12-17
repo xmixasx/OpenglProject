@@ -18,22 +18,13 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Drawer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ShaderLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Rendering.cpp">
+    <ClCompile Include="ViewObjectHander.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -45,25 +36,16 @@
     <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32s.lib" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ShaderLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LoadMesh.h">
+    <ClInclude Include="OpenglIncludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Manager.h">
+    <ClInclude Include="ShaderLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Drawer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rendering.h">
+    <ClInclude Include="ViewObjectHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
