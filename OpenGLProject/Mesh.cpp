@@ -17,7 +17,7 @@
   void Mesh::loadFromFile(char* model_filename) {
 
   	ifstream in(model_filename, ios::in);
-
+	 
 	if (!in) { cerr << "Cannot open " << model_filename << endl; exit(1); }
 	vector<int> nb_seen;
 
@@ -29,10 +29,10 @@
 			this->vertices.push_back(v);
 		}  else if (line.substr(0,2) == "f ") {
 			istringstream s(line.substr(2));
-			GLushort a,b,c;
-			s >> a; s >> b; s >> c;
-			a--; b--; c--;
-			this->elements.push_back(a); this->elements.push_back(b); this->elements.push_back(c);
+			string a;
+			while (s >> a){
+			int g = abs(atoi(a.c_str()));
+			this->elements.push_back(g-1); }
 		}
 		else if (line[0] == '#') { /* ignoring this line */ }
 		else { /* ignoring this line */ }

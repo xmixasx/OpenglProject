@@ -196,8 +196,8 @@ void ViewObjectHandler::logic() {
 		glm::mat3 camera2object = glm::inverse(glm::mat3(transforms[MODE_CAMERA]) * glm::mat3(main_object->object2world));
 		glm::vec3 axis_in_object_coord = camera2object * axis_in_camera_coord;
 		main_object->object2world = glm::rotate(main_object->object2world, angle, axis_in_object_coord);
-		last_mx = cur_mx;
-		last_my = cur_my;
+		last_mx = cur_mx*1.05;
+		last_my = cur_my*1.05;
 	}
 
 	// Model

@@ -29,13 +29,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glut32.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32mx.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32mxs.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32s.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -48,5 +41,12 @@
     <ClInclude Include="ViewObjectHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libs\glew32mx.lib" />
+    <Library Include="Libs\glew32mxs.lib" />
+    <Library Include="Libs\glew32s.lib" />
+    <Library Include="Libs\glut32.lib" />
+    <Library Include="Libs\glew32.lib" />
   </ItemGroup>
 </Project>

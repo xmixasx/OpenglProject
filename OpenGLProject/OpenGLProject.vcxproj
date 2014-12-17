@@ -82,17 +82,17 @@
     <ClCompile Include="ViewObjectHander.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32mx.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32mxs.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glew32s.lib" />
-    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\lib\glut32.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="OpenglIncludes.h" />
     <ClInclude Include="ShaderLoader.h" />
     <ClInclude Include="ViewObjectHandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libs\glew32.lib" />
+    <Library Include="Libs\glew32mx.lib" />
+    <Library Include="Libs\glew32mxs.lib" />
+    <Library Include="Libs\glew32s.lib" />
+    <Library Include="Libs\glut32.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
