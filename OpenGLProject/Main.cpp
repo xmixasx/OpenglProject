@@ -11,28 +11,30 @@
 
 int screen_width=800, screen_height=600;
 
-Mesh main_object;
-ViewObjectHandler obj_handler;
+Mesh *main_object = new Mesh();
+ViewObjectHandler *obj_handler = new ViewObjectHandler();
 
 void init_view() {
-	main_object.object2world = glm::mat4(1);
+	main_object->object2world = glm::mat4(1);
 }
 
-void onSpecial(int key, int x, int y) {obj_handler.onSpecial( key,  x,  y);}
+void onSpecial(int key, int x, int y) {obj_handler->onSpecial( key,  x,  y);}
 
-void onSpecialUp(int key, int x, int y) {obj_handler.onSpecialUp( key,  x,  y);}
+void onSpecialUp(int key, int x, int y) {obj_handler->onSpecialUp( key,  x,  y);}
 
-void onDisplay() {obj_handler.onDisplay();}
+void onDisplay() {obj_handler->onDisplay();}
 
-void onMouse(int button, int state, int x, int y) {obj_handler.onMouse( button,  state,  x,  y);}
+void onMouse(int button, int state, int x, int y) {obj_handler->onMouse( button,  state,  x,  y);}
 
-void onMotion(int x, int y) {obj_handler.onMotion(x,y);}
+void onMotion(int x, int y) {obj_handler->onMotion(x,y);}
 
-void onReshape(int width, int height) {obj_handler.onReshape(width,  height);}
+void onReshape(int width, int height) {obj_handler->onReshape(width,  height);}
 
 void free_resources()
 {
 	glDeleteProgram(program);
+	delete main_object;
+	delete obj_handler;
 }
 
 int main(int argc, char* argv[]) {
@@ -53,10 +55,10 @@ int main(int argc, char* argv[]) {
 	}
 
 	ShaderLoader simple_shader;
-	simple_shader.loadShader("Vertex.glsl", "Fragment.glsl");
+	simple_shader.loadShader("Vertex_i.glsl", "Fragment2.glsl");
 
-	main_object.loadFromFile("some.obj");
-	obj_handler.setObject(&main_object);
+	main_object->loadFromFile("some.obj");
+	obj_handler->setObject(main_object);
 
 	init_view();
 	glutDisplayFunc(onDisplay);

@@ -15,4 +15,7 @@ public:
 private:
 	GLint create_shader(const char* filename, GLenum type);
 	char* file_read(const char* filename);
+	glm::vec3 LightPos[1];
+	glm::vec3 LightColor[1];
+	
 };
